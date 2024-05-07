@@ -1,0 +1,38 @@
+
+.galleri {
+    display: flex; 
+    flex-wrap: wrap; /* wrap så staplas */
+    justify-content: center; /* centrerar */
+}
+
+.galleri a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.spel-box {
+    width: 250px;
+    margin: 10px;
+    text-align: left;
+    border: transparent; /* border håller skiten på plats */
+    padding: 5px;
+    border-radius: 5px; 
+    border-width: 2px;
+}
+
+.spel-box:hover {
+    background-color: lightgrey; /* så man ser när man kan klicka */
+}
+
+.spel-box img {
+    width:100%;
+    height: 200px; /* bra höjd */
+    object-fit: cover; 
+}
+
+@media screen and (max-width: 992px){
+    .spel-box {
+        width: 150px; /* vid mindre skärmar. */
+    }
+}

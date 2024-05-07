@@ -1,0 +1,145 @@
+/* Generella stylingen */
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif; /* Väljer inter som font */
+    margin: 0; /* så att den lägger sig utan margins */
+    overflow-x: hidden; /* ingen scrollning i sidleds */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "n m m m m m m m m m"; /* n är navbar, resten är main, gjort såhär så att när man stänger navbar så blir det bara "n" */
+    z-index: -1; /* grid containern är bara referens, så den göms bakom */
+}
+
+.fällbar-meny {
+    display: flex; /* flexbox för att kunna använda flex-direction */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* hela sin grid template area */
+    height: 100vh; /* hela sidan */
+    grid-area: n; /* för grid template */
+    flex-direction: column; /* så att länkar staplas */
+}
+
+#logo {
+    width: 9.5vw;
+    position: absolute; /* så att den inte flyttar på sig */
+}
+
+#logo:hover {
+    background-color: lightgrey; /* så att man ser när man kan klicka på den */
+}
+
+.main {
+    width: 100%; /* hela sin grid template area */
+    height: 100vh; /* Hela sidans höjd */
+    grid-area: m; /* för grid template */
+    z-index: 1; /* nu stör den inte pilen */
+}
+
+#pil-nav {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    z-index: 4; /* så att den alltid är över allt */
+}
+
+/* anpassar navbar för mindre skärmar */
+@media only screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-areas:
+        "n m m m m m"; /* annan bättre grid area för mindre skärmar */
+    }
+
+    #logo { 
+        width: 15.3vw; /* anpassat för mindre skärmar */
+    }
+
+    #länk-container {
+        margin-top: 5vw;
+        
+    }
+
+    .nav-länk {
+        margin-bottom: 14vw;
+    }
+
+    .subhuvudcontainer {
+        margin: 5vw;
+        display: block;
+    }
+
+    body {
+        font-size: small;
+      }
+
+}
+
+#container-logo {
+    position: relative; /* så att den flyttar på sig */
+    display: flex;
+    flex-direction: column; /* så att skit staplas */
+    align-items: center; /* så att länkar är i mitten */
+    width: 20%;
+    height: 9vw;
+}
+
+#länk-container {
+    position: relative;
+    display: flex;
+    justify-content: center; /* centerar */
+}
+
+#länk-subcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* så att länkar går ner på nästa rad, inte ligger inline */
+}
+
+.nav-länk {
+    margin-top: 4vw;
+}
+
+.nav-länk a {
+    text-decoration: none; /* tar bort underlinje */
+    color: black; /* svart text */
+    font-weight: 600; /* fet text */
+    font-size: 20px; 
+}
+
+.nav-länk a:hover {
+    background-color: lightgrey; /* så att man ser när man kan klicka */
+}
+
+footer {
+    position: fixed; /* så att den alltid är längst ner, följer med */
+    bottom: 0; /* längst ner */
+    left: 0; /* längst till vänster */
+    width: 100%; /* hela sidans bredd */
+    background-color: white; /* vit bakgrund */
+    z-index: 100; /* så att den alltid är överst */
+    margin: 0; /* 0 margin */
+}
+
+.huvudcontainer {
+    max-width: 100%; /* hela möjliga bredd */
+    max-height: 100%; /* hela möjliga höjd */
+    position: absolute; /* så att den inte flyttar på sig, men undercontainrar kan flytta */
+    z-index: -1; /* också bara referens */
+}
+
+/* Container som håller allt som ska synas som inte är navbar eller pilen */
+.subhuvudcontainer {
+    display: flex;
+    flex-direction: row; /* istället för kolumn */
+    max-width: 100%;
+    height: 95vh; 
+    margin: 2vw; /* margin runt om hela */
+    z-index: -1; /* referens */
+    flex-wrap: wrap; /* så att element går ner på nästa rad */
+}

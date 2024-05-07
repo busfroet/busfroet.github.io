@@ -1,0 +1,113 @@
+.huvudcontainer {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.subhuvudcontainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  height: 95vh;
+  margin: 2vw;
+  z-index: -1;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 992px) {
+  .subhuvudcontainer {
+      margin: 5vw;
+      display: block;
+  }
+
+  .spotlight-container {
+      flex-direction: column;
+    }
+
+    .nyhetscontainer {
+      flex-direction: column;
+    }
+
+}
+
+/* Spotlighten */
+.spotlight-container {
+  display: flex;
+  margin-bottom: 20px;
+  max-width: 80vw;
+}
+
+.spotlightimage img {
+  max-width: 100%;  /* Så att bilden inte blir större än container */
+  height: auto; /* Så att bilden inte blir större än container */
+  min-height: 440px; /* Minsta höjd på bilden, så att det inte blir konstigt */
+  object-fit: cover;
+}
+
+.spotlight-text {
+  flex: 1; /* Så att allt blir lika brett */
+  margin-left: 2vw; /* Så att det blir lite mellanrum mellan bild och text */
+  min-height: 200px;
+  margin-right: 6vw;
+}
+
+.trending-item {
+  margin-bottom: 2vh;
+  text-align: center;
+  background-color: lightgrey; /* Så man ser bättre */
+}
+
+/* så man ser när man kan klicka */
+.trending-item:hover {
+  background-color: white;
+  font-weight: bold; 
+}
+
+.trending-item a {
+  color: black; /* Så att det inte blir blått/lila */
+  text-decoration: none; /* Så att det inte blir understruket */
+}
+
+.nyhetsbild {
+  width: 30vw; /* bra bredd */
+  height: 20vw;
+
+  /* lite margins hehe */
+  margin-bottom: 2vh;
+  margin-right: 2vw;
+}
+
+.nyhetsbild img {
+  width: 100%; /* fyller */
+  height: 100%; /* fyller */
+  object-fit: cover; /* så att bilden inte blir konstig aspect ratio */
+}
+
+.nyhetscontainer { 
+  display: flex;
+  margin-right: 4vw;
+}
+
+.nyhetstext {
+  flex: 1; /* så att allt blir lika brett */
+  max-width: 25vw;
+  margin-right: 6vw;
+}
+
+.tråd-item {
+  margin-bottom: 2vh;
+  text-align: center;
+  background-color: lightgrey; /* Så att man ser */
+}
+
+.tråd-item a {
+  color: black; /* Så att det inte blir blått/lila */
+  text-decoration: none; /* Så att det inte blir understruket */
+}
+
+/* Så att man ser när man kan klicka */
+.tråd-item:hover {
+  background-color: white;
+  font-weight: bold;
+}

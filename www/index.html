@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameScope | Game Reviews</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Välkommen till GameScope, din ultimata destination för insiktsfulla spelrecensioner, senaste nyheterna, engagerande forum och mer. Utforska vårt mångsidiga innehåll om spel, håll dig uppdaterad med branschtrender och gå med i vår livliga community idag. Ta din spelupplevelse till nästa nivå med GameScope!">
+
+    <!-- Kopplade filer -->
+    <link rel="stylesheet" href="assets/CSS/styles.css">
+    <link rel="stylesheet" href="assets/CSS/index.css">
+
+    <!-- Kopplad font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
+    
+
+</head>
+<body>
+    <div style="z-index: -1;" class="container" id="container"> <!-- z-index: -1 för jag hade problem att man inte såg vissa saker -->
+        <div class="grid-container"> <!-- Grid container för att hålla allt med grid templates -->
+
+            <!-- Navbar/Fällbar meny -->
+            <div class="fällbar-meny" id="fällbar-meny">
+
+                <!-- logga -->
+                <div class="container-logo" id="container-logo">
+                    <a href="index.html"><img id="logo" class="logo" src="assets/Media/logo.webp" alt="logga"></a>
+                </div>
+
+                <!-- länkar till undersidor -->
+                <div class="länk-container" id="länk-container"> 
+                    <div class="länk-subcontainer">
+                        <div class="nav-länk"><a href="spel.html">Spel</a></div>
+                        <div class="nav-länk"><a href="nyheter.html">Nyheter</a></div>
+                        <div class="nav-länk"><a href="forum.html">Forum</a></div>
+                        <div class="nav-länk"><a href="om-oss.html">Om oss</a></div>
+                        <div class="nav-länk"><a href="användare.html">Logga in</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main -->
+            <main class="main" id="main">
+                <div class="huvudcontainer"> <!-- Huvudcontainer med position: absolute; och allt inuti den så att inget påverkar nav-pilen -->
+                    <div class="subhuvudcontainer"> <!-- Subhuvudcontainer för att få margin med alla kanter -->
+                        <!-- Spotlight spel -->
+                        <article class="spotlight-container">
+                            <div class="spotlightimage">
+                                <img id="rustimage" src="assets/Media/rust.webp" alt="Spotlightbild">
+                            </div>
+                            <div class="spotlight-text"> <!-- Texten i separat div för bättre kontroll -->
+                                <h1>Rust</h1>
+                                <p>Vi på GameScope har testat Rust och imponerats av dess brutala överlevnadsutmaningar. I spelet kastas spelare in i en obeveklig värld där de måste kämpa mot både naturen och andra spelare för att överleva. Med sin realistiska miljö och krävande spelstil erbjuder Rust en intensiv och spännande spelupplevelse för fans av överlevnadsgenren. <a href="rust.html">Läs mer</a></p>
+                            </div>
+
+                            <!-- Trendande -->
+                            <div class="trendingcontainer"> 
+                                <div id="trendingrubrik"><h1>Trendande</h1></div>
+                                <div class="trending-item"><a href="rust.html">Rust</a></div>
+                                <div class="trending-item"><a href="generisktråd.html">Fortnite Tråd</a></div>
+                                <div class="trending-item"><a href="nyheter.html">COD Nyhet</a></div>
+                            </div>
+                        </article>
+
+                        <!-- Nyheter -->
+                        <div class="nyhetswrapper">
+                            <!-- Nyhet 1 -->
+                            <article class="nyhetscontainer">
+                                <div class="nyhetsbild">
+                                    <img src="assets/Media/nyhet1.webp" alt="Nyhetsbild">
+                                </div>
+                                <div class="nyhetstext">
+                                    <p><b>COD: Warzone: </b>De senaste ändringarna i Call of Duty Warzone för konsolspelare har väckt stor entusiasm. Uppdateringen levererar förbättrad grafik och smidigare spelupplevelse på PlayStation och Xbox. Spelare kan nu njuta av en mer realistisk visuell kvalitet och enklare spelflöde. Utvecklarna har inkluderat exklusiva anpassningar som är skräddarsydda för konsolspelare, vilket förhöjer spelupplevelsen avsevärt. Dyk in i striden och upplev de spännande förbättringarna i Call of Duty Warzone på din konsol redan idag! <a href="nyheter.html">Läs mer</a></p>
+                                </div>
+                            </article>
+
+                            <!-- Nyhet 2 -->
+                            <article class="nyhetscontainer">
+                                <div class="nyhetsbild">
+                                    <img src="assets/Media/nyhet2.webp" alt="Nyhetsbild">
+                                </div>
+                                <div class="nyhetstext">
+                                    <p><b>Fortnite: </b>
+                                        "Fortnite, det populära battle royale-spelet, fortsätter att överraska spelare världen över med spännande uppdateringar. Senaste nytt avslöjar en kommande samarbete med flera kända artister för att erbjuda spelare exklusiva konserter och event i spelet. Utöver detta förbereder utvecklarna också en rad nya spellägen och kosmetiska föremål för att hålla upplevelsen fräsch och engagerande. Spelare kan förvänta sig en intensiv och varierad spelupplevelse i Fortnite under de kommande veckorna." <a href="nyheter.html">Läs mer</a></p>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Forum -->
+                        <article class="trådcontainer" style="padding-bottom: 400px;"> <!-- Padding bottom så att inget döljs av footern -->
+                            <div class="trådrubrik"><h1>Forum</h1></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 1</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 2</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 3</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 4</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 5</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 6</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 7</a></div>
+                            <div class="tråd-item"><a href="generisktråd.html">Tråd 8</a></div>
+                        </article>
+
+                        <!-- Footer -->
+                        <footer>
+                            <p>Copyright © 2024, GameScope. Alla rättigheter Förbehållna</p>
+                            <p>Kontakt: david.ishii@student.tabyenskilda.se</p>
+                        </footer>
+                    </div>
+                </div>
+
+                <!-- Nav-knapp -->
+                <a href="#" id="nav-knapp"><img id="pil-nav" src="assets/Media/pil.webp" alt="Toggle Grid"></a>
+            </main>
+        </div>    
+    </div>
+
+    <!-- Länkar javascript fil -->
+    <script src="assets/JS/scripts.js"></script>
+</body>
+</html>
