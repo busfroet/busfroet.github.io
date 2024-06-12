@@ -1,96 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tabyenskilda.com</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Täby Enskilda T23" />
-    <meta name="keywords" content="t23, täbyenskilda, tabyenskilda, täby enskilda, tabyenskilda" />
-    <meta name="author" content="busfroet" />
-    <meta property="og:type" content="site" />
-    <meta property="og:title" content="tabyenskilda.com" />
-    <meta property="og:description" content="tabyenskilda.com - T23" />
-    <meta property="og:url" content="https://tabyenskilda.com/" />
-    <meta property="og:image" content="assets/icons/t23.jpg" />
-    <meta itemprop="name" content="tabyenskilda.com" />
-    <meta itemprop="description" content="tabyenskilda.com - T23" />
-    <meta itemprop="image" content="assets/icons/t23.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <link rel="shortcut icon" href="assets/icons/t23.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="assets/stylesheets/stylesheet.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-  </head>
-
-  <body>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-
-    <div id="main">
-      <table class="box">
-        <tbody>
-          <tr>
-            <td><span id="line1" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line2" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line3 space" style="white-space: pre;"></span></td>
-          </tr>
-          <tr>
-            <td><span id="line4" style="white-space: pre;"></span></td>
-          </tr>
-        </tbody>
-      </table>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-family: consolas, sans-serif;
+            font-style: italic;
+            font-size: 12px;
+        }
+        #enter {
+            font-size: 2em;
+            cursor: pointer;
+        }
+        #video-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1000;
+        }
+        #screamer-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none; /* Prevent interaction with video */
+        }
+    </style>
+</head>
+<body>
+    <div id="enter" onclick="startScreamer()">ENTER</div>
+    <div id="video-container">
+        <video controls="false" id="screamer-video" src="vide0.mp4" type="video/mp4"></video>
     </div>
 
-    <div class="container" style="display: none;">
-      <h1 class="brand-header">
-        <a href="https://oguser.xyz/redirect" target="_BLANK">tabyenskilda.com</a>
-      </h1>
+    <script>
+        function startScreamer() {
+            const enterDiv = document.getElementById('enter');
+            const videoContainer = document.getElementById('video-container');
+            const video = document.getElementById('screamer-video');
 
-      <p><span id="brand"></span></p>
-    </div>
+            enterDiv.style.display = 'none';
+            videoContainer.style.display = 'block';
+            video.controls = false; // Ensure controls are disabled
+            this.controls = false;
+            video.play();
+            this.controls = false;
+            video.requestFullscreen();
 
-    <div class="marquee-container" style="visibility: hidden;">
-      <pre>|<div id="marquee"></div>|</pre>
-    </div>
+            // Prevent pausing by clicking
+            video.addEventListener('click', function(event) {
+                event.preventDefault();
+                video.play(); // Ensure the video keeps playing
+            });
+        }
 
-    <div class="background" style="display: none;">
-      <div id="pattern"></div>
-
-      <audio id="audio" loop="">
-        <source src="assets/others/vid.mp4" type="audio/mp4" />
-        <script>
-          const audio = document.getElementById('audio');
-
-          app.audioElement = audio;
-          app.audioElement.volume = 0;
-        </script>
-      </audio>
-
-      <video id="background" loop="">
-        <source src="assets/others/vid.mp4" type="video/mp4" />
-        <script>
-          const video = document.getElementById('background');
-
-          app.videoElement = video;
-          app.videoElement.volume = 0;
-        </script>
-      </video>
-    </div>
-    <div class="top-right">
-        <i><a class=""></a></i> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-      <i><a class="skip">ENTER⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</a></i>
-    </div>
-    <div class="footer">
-      
-    </div>
-
-    <script type="text/javascript" src="assets/javascript/lib/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/jquery.marquee.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/jquery.cookie.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/lib/typed.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/portfolio.js"></script>
-    <script type="text/javascript" src="assets/javascript/analytics.js"></script>
-  </body>
+        document.getElementById('screamer-video').addEventListener('loadeddata', function() {
+            this.controls = false; // Ensure controls are disabled once the video loads
+            video.controls = false;
+        });
+    </script>
+</body>
 </html>
