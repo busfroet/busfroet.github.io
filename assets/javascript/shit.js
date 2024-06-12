@@ -1,0 +1,1 @@
+document.getElementById("a.spline-watermark").remove();
